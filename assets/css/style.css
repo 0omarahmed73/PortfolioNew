@@ -1,0 +1,387 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+
+/* Global Attributes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+
+
+
+html {
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+li,
+ul {
+  all: unset;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  color: white;
+  text-align: center;
+}
+.container {
+  padding: 0 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* NavBar */
+nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  min-height: 70px;
+  background-color: #24252a;
+}
+
+nav .container {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  padding: 7px 30px;
+  background-color: #0486a7;
+  border: 1px solid #0486a7 !important;
+  border: unset;
+  color: white;
+  outline: unset;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+li {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li:hover {
+  opacity: 0.8;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid white !important;
+  color: white;
+}
+
+.mob-nav {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 70px;
+    right: -23px;
+    display: none;
+    z-index: 10;
+    bottom: 0;
+    transition: 0.3s;
+    padding: 30px 50px 30px 50px;
+}
+.mob-nav * {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid ;
+}
+
+.mob-nav button {
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+}
+.span-menu {
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    /* border: 1px solid; */
+    height: 50px;
+    padding-top: 7px;
+
+}
+.span-menu span {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+/* Main */
+
+.main {
+  width: 100%;
+  margin-top: 70px;
+  padding-block: 30px;
+  min-height: calc(100vh - 70px);
+  background-color: #070913;
+}
+
+.main .container {
+  padding: 0;
+  /* border: 1px solid blue; */
+  min-height: calc(100vh - 70px) ;
+  align-items: center;
+  justify-content: center !important;
+  flex-direction: column;
+}
+
+.part1 {
+  text-align: start;
+  /* border: 1px solid ; */
+}
+
+.part1 h1 {
+  font-size: 50px;
+  line-height: 1.3;
+}
+
+.part1 p {
+  opacity: 1;
+  font-size: 30px;
+  color: rgb(208, 205, 205);
+}
+
+.part2 img {
+  max-width: 400px;
+  transition: 0.5s;
+}
+
+.part2 img:hover {
+  transform: scale(1.1);
+}
+
+.upper {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.lower {
+  cursor: pointer;
+  display: inline-block;
+  background: orange;
+  border: 1px solid orange;
+
+  color: black;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.lower h1 {
+  font-size: 20px !important;
+}
+
+.lower:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+/* Second Main */
+main {
+  position: relative;
+  background: linear-gradient(to left, #0e0861, #120520);
+  /* padding-block:100px ; */
+  min-height: calc(100vh - 70px);
+  color: white;
+}
+main .container {
+  min-height: calc(100vh - 70px);
+}
+
+main .container h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.texts1 {
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(1, 0, 0, 1) ;
+  padding-block: 20px;
+  width: 100%;
+}
+
+.texts1:hover {
+  transition: 0.5s linear !important;
+  transform: scale(1.1);
+}
+
+main p,
+main h1 {
+  text-shadow: 7px 6px 20px #000000;
+}
+/* Media Queries */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  
+  .main .container {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  .part1 {
+    text-align: center !important;
+  }
+  .part2 img {
+    margin-top: 50px;
+  }
+
+  .upper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 670px) {
+    .nav-links {
+        display: none;
+      }
+      .button {
+        display: none;
+      }
+      .span-menu {
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mob-nav {
+        top: 69px !important;
+        right: -400px;
+        display: flex;
+        
+    }
+    .click.mob-nav {
+        right: -22px;
+    }
+    
+  .container {
+    max-width: 90% !important;
+  }
+
+  .part2 img:hover {
+    transform: scale(1.1) !important;
+  }
+
+  .part2 img {
+    max-width: 300px;
+  }
+  .texts1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .divs{
+    position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0;
+      z-index: -1;
+      transition: 0.5s;
+  }
+  .click.divs {
+    z-index: 7;
+
+      opacity: 0.7;
+  }
+  .texts1:hover {
+    transition: 0.5s linear !important;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 100% !important;
+  }
+
+  nav .container {
+    padding: 12px;
+  }
+
+  nav .logo-text h1 {
+    font-size: 18px;
+  }
+  main .container {
+    padding-inline: 32px;
+  }
+  main .container h1 {
+    font-size: 40px;
+  }
+
+  main p {
+    font-size: 15px;
+  }
+
+  .mob-nav {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 71px;
+    right: -300px;
+  
+    padding: 30px 30px 30px 30px;
+}
+.click.mob-nav {
+    right: -10px;
+}
+
+
+}
